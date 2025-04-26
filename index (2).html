@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planarian Regeneration Predictor</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Planarian Regeneration Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="drug">Drug:</label>
+        <input type="text" id="drug" name="Drug" required><br>
+
+        <label for="concentration">Concentration (µg/ml):</label>
+        <input type="number" id="concentration" name="Concentration" step="0.1" required><br>
+
+        <label for="exposure_time">Exposure Time (hours):</label>
+        <input type="number" id="exposure_time" name="Exposure_Time" step="1" required><br>
+
+        <label for="planarian_age">Planarian Age (months):</label>
+        <input type="number" id="planarian_age" name="Planarian_Age" step="1" required><br>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="Temperature" step="0.1" required><br>
+
+        <label for="ph">pH Level:</label>
+        <input type="number" id="ph" name="pH_Level" step="0.1" required><br>
+
+        <label for="observed_effect">Observed Effect:</label>
+        <input type="text" id="observed_effect" name="Observed_Effect" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
